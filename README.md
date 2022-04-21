@@ -1,6 +1,7 @@
 The project contains memory leak, the error is in LeakCanary:
 - Run application
 - Press "Back" btn to close the app
+
 (Bug) LeakCanary error:
 ```
 2022-04-20 15:05:27.839 21340-21340/com.github.kolya.myapplication D/LeakCanary: ​
