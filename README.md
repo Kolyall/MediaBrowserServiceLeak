@@ -1,4 +1,4 @@
-The project contains leak error:
+The project contains memory leak, the error is in LeakCanary:
 - Run application
 - Press "Back" btn to close the app
 (Bug) LeakCanary error:
