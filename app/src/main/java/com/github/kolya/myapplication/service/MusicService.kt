@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat.MediaItem
 import android.support.v4.media.session.MediaSessionCompat
 import android.util.Log
+import androidx.media.MediaBrowserServiceCompat
 import androidx.media.session.MediaButtonReceiver
 import com.github.kolya.myapplication.R
 import com.github.kolya.myapplication.ui.MainActivity
 import kotlin.properties.Delegates
 
-class MusicService : MediaBrowserLifecycleServiceCompat() {
+class MusicService : MediaBrowserServiceCompat() {
 
     private var session: MediaSessionCompat by Delegates.notNull()
 

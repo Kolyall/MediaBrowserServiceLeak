@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
+import android.support.v4.media.session.PlaybackStateCompat
 import android.util.Log
 import com.github.kolya.myapplication.R
 import com.github.kolya.myapplication.ui.connector.MediaBrowserConnector
 import com.github.kolya.myapplication.ui.connector.callbacks.MediaConnectionCallback
 import com.github.kolya.myapplication.ui.connector.callbacks.MediaControllerCallback
-import com.github.kolya.myapplication.models.AppPlaybackStatePosition
 import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity(), MediaConnectionCallback.OnMediaConnectionCallbackListener,
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), MediaConnectionCallback.OnMediaConnect
         Log.d(TAG, "onSessionDisconnected: ")
     }
 
-    override fun onPlaybackStateChanged(playbackState: AppPlaybackStatePosition) {
+    override fun onPlaybackStateChanged(playbackState: PlaybackStateCompat?) {
         Log.d(TAG, "onPlaybackStateChanged: $playbackState")
     }
 
